@@ -16,13 +16,13 @@ public class AutomationController {
         driver=new ChromeDriver();
 
         driver.manage().window().maximize();
-//        driver.get("https://www.saucedemo.com/");
+        driver.get("https://www.saucedemo.com/");
     }
 
     @AfterMethod
     public void tearDown()
     {
-       // driver.quit();
+        driver.quit();
     }
 
     public boolean isElementPresent(By locatorKey) {

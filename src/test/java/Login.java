@@ -1,14 +1,7 @@
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.List;
 
 public class Login extends AutomationController{
 
@@ -41,7 +34,7 @@ public class Login extends AutomationController{
     }
 
     @Test(priority = 3)
-    public void louOut(){
+    public void logOut(){
         driver.findElement(By.xpath("//input[@id=\"user-name\"]")).sendKeys("standard_user");
         driver.findElement(By.xpath("//input[@id=\"password\"]")).sendKeys("secret_sauce");
         driver.findElement(By.xpath("//input[@id=\"login-button\"]")).click();
@@ -54,6 +47,7 @@ public class Login extends AutomationController{
          Assert.assertTrue( loginPage.isDisplayed(),"Login page is display");
 
         System.out.println("In logout method");
+        Assert.fail();
     }
 
 
