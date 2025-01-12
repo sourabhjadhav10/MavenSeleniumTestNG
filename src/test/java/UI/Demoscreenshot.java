@@ -1,3 +1,5 @@
+package UI;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -10,6 +12,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class Demoscreenshot extends AutomationController
+
+
 {
     @Test
     public void screenShot() throws IOException {

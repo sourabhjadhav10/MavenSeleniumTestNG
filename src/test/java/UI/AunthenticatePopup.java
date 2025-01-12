@@ -1,3 +1,5 @@
+package UI;
+
 import org.testng.annotations.Test;
 
 import java.sql.Driver;

@@ -1,3 +1,5 @@
+package UI;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,15 +11,15 @@ public class AutomationController {
 
     @BeforeMethod
     public void setup() {
-        driver=new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.saucedemo.com/");
+       driver=new ChromeDriver();
+       driver.manage().window().maximize();
+     //  driver.get("https://www.saucedemo.com/");
     }
 
     @AfterMethod
     public void tearDown()
     {
-        driver.quit();
+//        driver.quit();
     }
 
     public boolean isElementPresent(By locatorKey) {

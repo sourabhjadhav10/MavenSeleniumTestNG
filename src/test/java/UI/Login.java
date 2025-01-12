@@ -1,14 +1,17 @@
+package UI;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Login extends AutomationController{
+    LoginObjects lob=new LoginObjects();
 
     @Test(priority = 1)
     public void login(){
         // write code to login
-        driver.findElement(By.xpath("//input[@id=\"user-name\"]")).sendKeys("standard_user");
+        driver.findElement(By.xpath(lob.TEXT_BOX_USERNAME)).sendKeys(lob.STANDARD_USERNAME);
         driver.findElement(By.xpath("//input[@id=\"password\"]")).sendKeys("secret_sauce");
         driver.findElement(By.xpath("//input[@id=\"login-button\"]")).click();
         Assert.assertEquals(driver.findElement(By.xpath("//div[@class=\"app_logo\"]")).getText(),"Swag Labs");
@@ -42,12 +45,11 @@ public class Login extends AutomationController{
         driver.findElement(By.xpath("//button[@type=\"button\"]")).click();
         driver.findElement(By.xpath("//a[text()=\"Logout\"]")).click();
 
-       WebElement loginPage = driver.findElement(By.xpath("//div[@class='login_wrapper-inner']"));
+        WebElement loginPage = driver.findElement(By.xpath("//div[@class='login_wrapper-inner']"));
 
          Assert.assertTrue( loginPage.isDisplayed(),"Login page is display");
 
-        System.out.println("In logout method");
-        Assert.fail();
+         System.out.println(driver.getCurrentUrl());
     }
 
 

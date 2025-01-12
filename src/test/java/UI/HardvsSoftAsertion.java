@@ -1,3 +1,5 @@
+package UI;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -13,6 +15,7 @@ public class HardvsSoftAsertion {
         System.out.println("assertion...");
 
         Assert.assertEquals(1,1);
+
 
         System.out.println("assertion...");
         System.out.println("assertion...");

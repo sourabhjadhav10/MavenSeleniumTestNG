@@ -1,7 +1,9 @@
+package UI;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
+import java.util.*;
 public class HandleFrame extends AutomationController
 {
     @Test
@@ -9,7 +11,8 @@ public class HandleFrame extends AutomationController
     {
         driver.get("https://demo.automationtesting.in/Frames.html");
 
-       driver.findElement(By.xpath("//a[normalize-space()='Iframe with in an Iframe']")).click();
+     //  driver.findElement(By.xpath("//a[normalize-space()='Iframe with in an Iframe']")).click();
+        driver.findElement(By.xpath("//a[text()=\"Iframe with in an Iframe\"]")).click();
 
        WebElement outerframe = driver.findElement(By.xpath("//*[@id=\"Multiple\"]/iframe"));
        driver.switchTo().frame(outerframe);
@@ -20,6 +23,7 @@ public class HandleFrame extends AutomationController
        driver.findElement(By.xpath("//input[@type='text']")).sendKeys("welcome");
         driver.switchTo().defaultContent();
         driver.findElement(By.xpath("//a[text()='Single Iframe ']")).click();
+        List <WebElement> links=driver.findElements(By.xpath("//a"));
 
     }
 

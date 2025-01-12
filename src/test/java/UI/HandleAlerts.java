@@ -1,3 +1,5 @@
+package UI;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
