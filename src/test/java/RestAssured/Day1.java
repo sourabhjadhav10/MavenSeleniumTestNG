@@ -19,7 +19,7 @@ then()
 validate status code,extract response, extract headers cookies &response body...
 */
 
-public class HTTPRequests {
+public class Day1 {
     int id;
 
     @Test(priority = 1)
