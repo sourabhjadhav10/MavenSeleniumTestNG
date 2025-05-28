@@ -1,0 +1,12 @@
+{
+  "emp": {
+    "emp1": {
+      "name": "sourabh",
+      "role": "automation"
+    },
+    "emp2": {
+      "name": "john",
+      "role": "developer"
+    }
+  }
+}

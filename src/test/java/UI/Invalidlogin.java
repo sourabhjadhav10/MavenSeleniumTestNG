@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Invalidlogin extends AutomationController{
+public class Invalidlogin extends AutomationController {
 
     @Test
     public void testInvalid()

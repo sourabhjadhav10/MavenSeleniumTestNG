@@ -6,14 +6,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class DemoActtions extends AutomationController
+public class DemoActions extends AutomationController
 {
     @Test
     public void rightClick()
     {
         Actions a = new Actions(driver);
         WebElement e = driver.findElement(By.xpath("//input[@id=\"user-name\"]"));
-        a.contextClick().perform();
+        a.contextClick(e).perform();
+
+//        Actions action=new Actions(driver);
+//        WebElement element=driver.findElement(By.xpath("//button"));
+//        action.contextClick(element).perform();
     }
 
     @Test
@@ -23,6 +27,12 @@ public class DemoActtions extends AutomationController
         Actions ac = new Actions(driver);
         WebElement w = driver.findElement(By.xpath("//button[@class=\"dropbtn\"]"));
         ac.moveToElement(w).perform();
+
+//        // To mouse hover
+//        Actions action =new Actions(driver);
+//        WebElement element=driver.findElement(By.xpath("//button"));
+//        action.moveToElement(element).perform();
+
         driver.findElement(By.xpath("//a[@type=\"button\" and text()=\"Link 1\"]")).click();
        // driver.navigate().refresh();
        // driver.get(driver.getCurrentUrl());

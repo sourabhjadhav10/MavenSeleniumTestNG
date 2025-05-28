@@ -6,27 +6,27 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class FirstTest {
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver;
 
-	@BeforeTest
+	@BeforeMethod
 	public void setup() {
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.saucedemo.com/");
 	}
 
-	@AfterTest
+	@AfterMethod
 	public void tearDown() {
 		driver.quit();
 	}
 
+
 	@Test
 	public void Login() {
-		driver.findElement(By.xpath("//input[@id=\"user-name\"]")).sendKeys("standard_user");
+		driver.findElement(By.xpath("//input[@id=\"user-name\"]")).sendKeys("standard_use");
 		driver.findElement(By.xpath("//input[@id=\"password\"]")).sendKeys("secret_sauce");
 		driver.findElement(By.xpath("//input[@id=\"login-button\"]")).click();
 		String appHeader = driver.findElement(By.xpath("//div[@class=\"app_logo\"]")).getText();
@@ -35,9 +35,4 @@ public class FirstTest {
 		System.out.println("Logged in Successfully in app");
 	}
 }
-
-
-
-
-
 

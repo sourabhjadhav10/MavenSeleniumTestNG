@@ -33,4 +33,11 @@ public class ScreenShot extends AutomationController
         FileHandler.copy(s, q);
     }
 
+    @Test
+    public void takeScreenshot() throws IOException {
+        File source=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File destination=new File("screenshot.png");
+        FileHandler.copy(source,destination);
+    }
+
 }

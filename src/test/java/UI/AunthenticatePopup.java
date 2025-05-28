@@ -2,8 +2,6 @@ package UI;
 
 import org.testng.annotations.Test;
 
-import java.sql.Driver;
-
 public class AunthenticatePopup extends AutomationController
 {
     @Test

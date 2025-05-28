@@ -10,6 +10,7 @@ public class DemoHardAsser {
     @Test
     public void Test()
     {
+        //Soft Assertions
         SoftAssert sa = new SoftAssert();
         sa.assertEquals("Hardassertion", assertion);
         System.out.println("After assert equal");
@@ -22,9 +23,10 @@ public class DemoHardAsser {
     @Test
     public void Test1()
     {
+        //Hard assertions
         Assert.assertEquals("Hardassertion", assertion);
         System.out.println("Ater assert equals");
-        Assert.assertTrue(assertion.equals("Hardassertion"));
+        Assert.assertEquals(assertion, "Hardassertion");
         System.out.println("Ater assertion true");
 
     }
