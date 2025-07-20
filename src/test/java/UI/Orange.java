@@ -26,7 +26,6 @@ public class Orange
         driver.findElement(By.xpath("//input[@name=\"password\"]")).sendKeys("admin123");
         driver.findElement(By.xpath("//button[text()=\" Login \"]")).click();
 
-        Select = new Select(driver.findElement())
     }
     @AfterMethod
     public void close()
